@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML.JS Demo</title>
+    <do>
+        <set>
+            <name>
+                <val document></val>
+                    <dot body></dot>
+                    <dot onclick></dot>
+            </name>
+            <function>
+                <arguments>
+                    <argument event></argument>
+                </arguments>
+        
+                <block>
+                    <set>
+                        <name>
+                            <val document></val>
+                                <dot body></dot>
+                                <dot style></dot>
+                                <dot background></dot>
+                        </name>
+                        <op +><str>#</str><call>
+                            <group><call>
+                                <group><val _=Math></val>
+                                    <dot floor></dot></group>
+                                <op *>
+                                    <call>
+                                        <group><val _=Math></val>
+                                            <dot random></dot></group>
+                                    </call>
+                                    <int>16777215</int>
+                                </op>
+                            </call>
+                            <dot _=toString></dot></group>
+                            <int>16</int>
+                        </call></op>
+                    </set>
+                </block>
+            </function>
+        </set>
+    </do>
+    <script defer src="html.js"></script>
+</head>
+<body style="display: flex; align-items: center; justify-content: center; width: 99vw; height: 99vh; position: absolute; left: 0px; top: 0px;">
+    <h1 style="font-family: 'Segoe UI'; font-size: 10vh; color: white; background: black; border-radius: 10px; padding: 20px; user-select: none;">Click!</h1>
+</body>
+</html>
