@@ -1,0 +1,40 @@
+<set app><call><call><val require></val><str>express</str></call></call></set>
+<call>
+	<group><val app></val><dot get></dot></group>
+	<str>/</str>
+	<function>
+		<arguments>
+			<argument req></argument><argument res></argument>
+		</arguments>
+		<body>
+			<call>
+				<group><val res></val><dot sendFile></dot></group>
+				<str>/home/runner/HTMLJS/app/index.html</str>
+			</call>
+		</body>
+	</function>
+</call>
+<call>
+	<group><val app></val><dot get></dot></group>
+	<str>/html.js</str>
+	<function>
+		<arguments>
+			<argument req></argument><argument res></argument>
+		</arguments>
+		<body>
+			<call>
+				<group><val res></val><dot sendFile></dot></group>
+				<str>/home/runner/HTMLJS/htmljs/src.js</str>
+			</call>
+		</body>
+	</function>
+</call>
+<call>
+	<group><val app></val><dot listen></dot></group>
+	<int>3000</int>
+	<function>
+		<arguments></arguments>
+		<body>
+		</body>
+	</function>
+</call>
